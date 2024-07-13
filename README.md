@@ -16,19 +16,6 @@ This project is a banking system implemented using React for the frontend. It al
 - **Backend**: Node.js, Express.js (not covered in this README)
 - **Database**: MongoDB (not covered in this README)
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-- Node.js (version >= 12.x)
-- npm or yarn package manager
-
-### Clone the repo
-   ```sh
-   git clone https://github.com/your_username/banking-system-frontend.git
-```
 
 ### Live Url:
 https://bank-system-frontend.onrender.com
