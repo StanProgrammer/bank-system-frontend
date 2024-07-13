@@ -62,8 +62,14 @@ const LoansPage = () => {
         toast.error('Failed to submit loan application.');
       }
     } catch (error) {
+      if(error.response.status === 409){
+        toast.error('Loan application with this name already exists, please use a different name.');
+        toast.error('Loan application name are unique to make you identify your loans better.');
+      }
+      else{
       console.error('Error submitting loan:', error);
       toast.error('Failed to submit loan application. Please try again later.');
+      }
     }
   };
 
