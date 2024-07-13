@@ -1,0 +1,51 @@
+.user-home{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+   .user-icon{
+    position: fixed;
+    font-size: xx-large;
+    right: 0;
+    margin: 6px;
+    cursor: pointer;
+
+   }
+   .dropdown-menu{
+    font-size: 20px;
+   }
+    .content{
+        height: 100%;
+        width: 100%;
+        
+       
+    }
+    .profile{
+        color: blue;
+    }
+    .logout{
+        color: red;
+    }
+    .para{
+        cursor: pointer;
+    }
+}
+.fa-circle-user::after {
+    display: none !important; 
+  }
+
+  @media screen and (min-width:0px) and (max-width:600px) {
+    .hamburger{
+        display: block;
+    }
+    .container{
+       
+        gap: 6px;
+    }
+  }
+  @media screen and (min-width:600px) {
+    .hamburger{
+        display: none;
+    }
+
+  }

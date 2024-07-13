@@ -1,0 +1,32 @@
+.profile-card {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card-title {
+    color: #333;
+  }
+  
+  .card-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+  
+  .card-text p {
+    margin-bottom: 0.5rem; /* Adjust spacing between paragraphs */
+  }
+  

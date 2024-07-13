@@ -1,0 +1,36 @@
+/* ContactUs.css */
+.contact-us {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-us h2 {
+    color: #333;
+  }
+  
+  .contact-us .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-us .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .contact-us .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  .contact-us button {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .contact-us button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
