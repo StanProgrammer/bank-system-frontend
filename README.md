@@ -31,8 +31,7 @@ To get a local copy up and running follow these simple steps.
 ```
 
 ### Live Url:
-https://room-booking-frontend-ion3.onrender.com
-
+https://bank-system-frontend.onrender.com
 
 ### Backend Git Url:
 https://github.com/StanProgrammer/bank-system-backend
