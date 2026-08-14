@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
 import '../styles/Signup.css';
 import { toast } from 'react-toastify';
 
@@ -11,7 +10,6 @@ function Signup() {
     const [password, setPassword] = useState('');
     const [confPwd, setConfPwd] = useState('');
     const [phone, setPhone] = useState('');
-    const navigate = useNavigate();
     const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
     const validatePassword = (password) => {
@@ -33,15 +31,17 @@ function Signup() {
 
             }
             const result = await axios.post(`${backendUrl}/register`, { name, email, password, phone });
-            if(result.data.statusCode === 409){
-                toast(result.data.msg);
-            } else {
-                localStorage.setItem('token', result.data.token);
-                toast.success("Registration successful");
-                navigate("/home");
-            }
+            localStorage.setItem('token', result.data.token);
+            toast.success("Registration successful");
+            // Full page reload so App.js re-reads the token from localStorage.
+            // (Client-side navigate() would use stale state and bounce to /login.)
+            window.location.href = '/home';
         } catch (error) {
-            toast.error('Server error');
+            if (error.response && error.response.status === 409) {
+                toast.error(error.response.data.msg);
+            } else {
+                toast.error('Server error');
+            }
             console.log(error);
         }
     }
